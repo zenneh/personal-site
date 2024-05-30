@@ -1,52 +1,53 @@
 /* Open Sans */
 @font-face {
   font-family: 'Open Sans';
-  src: url("/fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url("/fonts/open-sans/OpenSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/open-sans/OpenSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: italic; }
 
 /* Literata */
 @font-face {
   font-family: 'Literata';
-  src: url("/fonts/literata/Literata-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/literata/Literata-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Literata';
-  src: url("/fonts/literata/Literata-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/literata/Literata-Italic-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: italic; }
 
 /* Monaspace */
 @font-face {
   font-family: 'Monaspace';
-  src: url("/fonts/monaspace/MonaspaceNeonVarVF[wght,wdth,slnt].ttf") format("truetype");
+  src: url("/personal-site/fonts/monaspace/MonaspaceNeonVarVF[wght,wdth,slnt].ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
-/* Jetbrains Mono*/
+/* Jetbrains Mono */
 @font-face {
   font-family: 'Jetbrains Mono';
-  src: url("/fonts/jetbrains-mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/jetbrains-mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Jetbrains Mono';
-  src: url("/fonts/jetbrains-mono/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/jetbrains-mono/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: italic; }
 
+/* Inter */
 @font-face {
   font-family: 'Inter';
-  src: url("/fonts/jetbrains-mono/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -532,8 +533,8 @@ section {
   --font-label: 0.889rem;
   --font-caption: 0.79rem;
   /* Font families */
-  --font-family-text: "Inter";
-  --font-family-mono: "Monaspaced"; }
+  --font-family-text: "Inter", "Open Sans";
+  --font-family-mono: "Monaspace", "Monospace"; }
 
 @media screen and (max-width: 1024px) {
   :root {
