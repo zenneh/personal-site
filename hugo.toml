@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = "Zenneh"
+
+theme = "zenneh"
+markup.highlight.noClasses=false
+
