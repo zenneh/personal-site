@@ -4,4 +4,4 @@ title = "Zenneh"
 
 theme = "zenneh"
 markup.highlight.noClasses=false
-
+enableEmoji = true
