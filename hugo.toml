@@ -1,7 +1,7 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://zenneh.github.io/personal-site/'
 languageCode = 'en-us'
 title = "Zenneh"
 
 theme = "zenneh"
 markup.highlight.noClasses=false
-
+enableEmoji = true

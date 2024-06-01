@@ -1,52 +1,53 @@
 /* Open Sans */
 @font-face {
   font-family: 'Open Sans';
-  src: url("/fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url("/fonts/open-sans/OpenSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/open-sans/OpenSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: italic; }
 
 /* Literata */
 @font-face {
   font-family: 'Literata';
-  src: url("/fonts/literata/Literata-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/literata/Literata-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Literata';
-  src: url("/fonts/literata/Literata-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/literata/Literata-Italic-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: italic; }
 
 /* Monaspace */
 @font-face {
   font-family: 'Monaspace';
-  src: url("/fonts/monaspace/MonaspaceNeonVarVF[wght,wdth,slnt].ttf") format("truetype");
+  src: url("/personal-site/fonts/monaspace/MonaspaceNeonVarVF[wght,wdth,slnt].ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
-/* Jetbrains Mono*/
+/* Jetbrains Mono */
 @font-face {
   font-family: 'Jetbrains Mono';
-  src: url("/fonts/jetbrains-mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/jetbrains-mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Jetbrains Mono';
-  src: url("/fonts/jetbrains-mono/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/jetbrains-mono/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: italic; }
 
+/* Inter */
 @font-face {
   font-family: 'Inter';
-  src: url("/fonts/jetbrains-mono/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  src: url("/personal-site/fonts/inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -108,12 +109,12 @@ section {
 
 /* Background */
 .bg {
-  color: #e6edf3;
+  color: text-color;
   background-color: var(--background-400); }
 
 /* PreWrapper */
 .chroma {
-  color: #e6edf3;
+  color: text-color;
   background-color: var(--background-400); }
 
 /* Other */
@@ -144,7 +145,7 @@ section {
 
 /* LineHighlight */
 .chroma .hl {
-  background-color: #6e7681; }
+  background-color: background; }
 
 /* LineNumbersTable */
 .chroma .lnt {
@@ -162,7 +163,7 @@ section {
   user-select: none;
   margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
-  color: #6e7681; }
+  color: background; }
 
 /* Line */
 .chroma .line {
@@ -447,7 +448,7 @@ section {
 
 /* TextWhitespace */
 .chroma .w {
-  color: #6e7681; }
+  color: background; }
 
 @use "sass:map";
 /* Theme */
@@ -532,8 +533,8 @@ section {
   --font-label: 0.889rem;
   --font-caption: 0.79rem;
   /* Font families */
-  --font-family-text: "Inter";
-  --font-family-mono: "Monaspaced"; }
+  --font-family-text: "Inter", "Open Sans";
+  --font-family-mono: "Monaspace", "Monospace"; }
 
 @media screen and (max-width: 1024px) {
   :root {
@@ -615,6 +616,16 @@ main {
     padding: .6em 1em;
     border-radius: var(--border);
     font-family: var(--font-family-mono); }
+  main h1,
+  main h2,
+  main h3,
+  main h4,
+  main h5,
+  main h6 {
+    font-family: var(--font-family-mono); }
+  main time {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-label); }
 
 /* Content specific styling */
 .content a {
@@ -699,9 +710,30 @@ main {
   .post .post-content {
     flex: 1;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    overflow: hidden; }
     .post .post-content > a {
-      text-decoration: underline; }
+      text-decoration: underline;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+
+.post-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-bottom: .8rem; }
+  .post-heading p {
+    color: var(--primary);
+    font-family: var(--font-family-mono);
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1; }
+  .post-heading time {
+    color: var(--primary);
+    font-family: var(--font-family-mono); }
 
 .tags {
   display: flex;

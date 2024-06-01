@@ -1,0 +1,3 @@
+[submodule "themes/zenneh"]
+	path = themes/zenneh
+	url = git@github.com:zenneh/zenneh-theme.git
