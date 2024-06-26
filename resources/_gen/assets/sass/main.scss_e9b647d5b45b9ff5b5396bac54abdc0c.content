@@ -22,13 +22,14 @@
   font-family: 'Literata';
   src: url("/personal-site/fonts/literata/Literata-Italic-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: normal;
+  font-weight: 100 900;
   font-style: italic; }
 
 /* Monaspace */
 @font-face {
   font-family: 'Monaspace';
   src: url("/personal-site/fonts/monaspace/MonaspaceNeonVarVF[wght,wdth,slnt].ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 100 900;
   font-style: normal; }
 
 /* Jetbrains Mono */
@@ -41,15 +42,15 @@
 @font-face {
   font-family: 'Jetbrains Mono';
   src: url("/personal-site/fonts/jetbrains-mono/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 100 900;
   font-style: italic; }
 
 /* Inter */
 @font-face {
   font-family: 'Inter';
   src: url("/personal-site/fonts/inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  font-weight: 100 900;
+  font-style: normal italic; }
 
 *,
 *::before,
@@ -494,16 +495,6 @@ section {
   --background-700: #141e19;
   --background-800: #1c2b24;
   --background-900: #25372e;
-  --surface: #040605;
-  --surface-100: black;
-  --surface-200: black;
-  --surface-300: black;
-  --surface-400: black;
-  --surface-500: #040605;
-  --surface-600: #0c120f;
-  --surface-700: #141e19;
-  --surface-800: #1c2b24;
-  --surface-900: #25372e;
   --text: #e2eee8;
   --text-100: #afd0bf;
   --text-200: #bbd7c9;
@@ -616,13 +607,17 @@ main {
     padding: .6em 1em;
     border-radius: var(--border);
     font-family: var(--font-family-mono); }
+  main img {
+    display: block;
+    border-radius: var(--border); }
   main h1,
   main h2,
   main h3,
   main h4,
   main h5,
   main h6 {
-    font-family: var(--font-family-mono); }
+    font-family: var(--font-family-mono);
+    font-weight: 700; }
   main time {
     font-family: var(--font-family-mono);
     font-size: var(--font-label); }
@@ -646,6 +641,11 @@ main {
 .content h1 {
   margin-bottom: calc(var(--font-h1) / 4);
   font-size: var(--font-h1); }
+  .content h1::before {
+    content: "~";
+    margin-right: .8rem;
+    color: var(--accent);
+    display: inline-block; }
 
 .content h2 {
   margin-bottom: calc(var(--font-h2) / 4);
@@ -667,8 +667,16 @@ main {
   margin-bottom: calc(var(--font-body) / 2); }
 
 .content a,
-.content p {
+.content p,
+.content ul,
+.content ol {
   margin-bottom: calc(var(--font-body)); }
+
+.content ul,
+.content li::before {
+  content: ">";
+  display: inline-block;
+  margin-right: .4rem; }
 
 .socials {
   display: flex;

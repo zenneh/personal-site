@@ -10,4 +10,4 @@ If you want to learn more about how to **maximize autism** and how I have everyt
 
 I'm working on a private email for contact since I don't want to receive offers from Nigerian princes.
 
-Ps: This site doesn't use cookies thank God :pray:.
+If you want to read a based blog about programming, fitness and random thoughts check out my Posts.
