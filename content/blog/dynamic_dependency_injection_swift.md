@@ -1,7 +1,7 @@
 +++
 title = 'Dynamic dependency injection for cool kids'
 date = 2024-10-10T22:26:23+02:00
-draft = false
+draft = true
 tags = ["swift"]
 
 [params]
